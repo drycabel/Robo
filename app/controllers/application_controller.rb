@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     if session[:order_id]
       Order.find(session[:order_id])
     else
-      Order.new #shipping_type: ShippingType.first
+      Order.new shipping_type: ShippingType.first
     end
   end
 
